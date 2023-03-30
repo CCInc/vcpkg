@@ -3,10 +3,9 @@ vcpkg_from_github(
     REPO borglab/gtsam
     REF 4.2a9
     SHA512 0aae0b785a3f7ae25008d0938848e93519786521cca9cd0cd1a8937ec5ac46f3b1ca1bfaaff1ca5812c92f8ef55b729a06c57632da5dd8fc38afc22d3047f8e0
-    HEAD_REF master
-    # PATCHES 
-    #     fix-c2280-error.patch
-    #     fix-boost-issue.patch
+    HEAD_REF master    
+    PATCHES
+        build-fixes.patch
 )
 
 vcpkg_configure_cmake(
@@ -25,7 +24,7 @@ vcpkg_configure_cmake(
 )
 
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(PACKAGE_NAME GTSAM CONFIG_PATH "lib/cmake/${PACKAGE_NAME}")
+vcpkg_cmake_config_fixup(PACKAGE_NAME GTSAM CONFIG_PATH lib/cmake/GTSAM)
 # vcpkg_fixup_pkgconfig()
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
