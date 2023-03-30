@@ -1,0 +1,29 @@
+{
+    "name": "gtsam",
+    "version-date": "2020-09-14",
+    "port-version": 2,
+    "description": "Perceptual JPEG encoder",
+    "homepage": "https://github.com/google/guetzli",
+    "dependencies": [
+      "tbb",
+      "boost-serialization",
+      "boost-system",
+      "boost-filesystem",
+      "boost-thread",
+      "boost-date-time",
+      "boost-regex",
+      "boost-program-options",
+      "boost-timer",
+      "eigen3",
+      "metis",
+      {
+        "name": "vcpkg-cmake",
+        "host": true
+      },
+      {
+        "name": "vcpkg-cmake-config",
+        "host": true
+      }
+    ]
+  }
+  
