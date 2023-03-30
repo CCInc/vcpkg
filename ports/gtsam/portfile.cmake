@@ -1,7 +1,7 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO borglab/gtsam
-    REF 4.2a9
+    REF ${VERSION}
     SHA512 0aae0b785a3f7ae25008d0938848e93519786521cca9cd0cd1a8937ec5ac46f3b1ca1bfaaff1ca5812c92f8ef55b729a06c57632da5dd8fc38afc22d3047f8e0
     HEAD_REF master    
     PATCHES
