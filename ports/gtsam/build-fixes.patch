@@ -1,3 +1,22 @@
+diff --git a/cmake/Config.cmake.in b/cmake/Config.cmake.in
+index cc2a7df8f..e11de1815 100644
+--- a/cmake/Config.cmake.in
++++ b/cmake/Config.cmake.in
+@@ -25,6 +25,14 @@ if(@GTSAM_USE_SYSTEM_EIGEN@)
+ find_dependency(Eigen3 REQUIRED)
+ endif()
+ 
++if(@GTSAM_USE_SYSTEM_METIS@)
++find_dependency(metis REQUIRED)
++endif()
++
++if(@GTSAM_USE_TBB@)
++find_dependency(TBB REQUIRED)
++endif()
++
+ # Load exports
+ include(${OUR_CMAKE_DIR}/@PACKAGE_NAME@-exports.cmake)
+ 
 diff --git a/cmake/FindTBB.cmake b/cmake/FindTBB.cmake
 deleted file mode 100644
 index 0ecd4ca0e..000000000
